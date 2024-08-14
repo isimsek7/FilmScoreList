@@ -3,6 +3,7 @@ bool loop = true;
 List<Film> films = new List<Film>();
 while(loop)
 {
+    //a standard infinite loop, which will become false after chosing 'h' and listing the Film objects.
     Console.Write("Yeni bir film eklemek ister misiniz ? (e/h)=");
     string input = Console.ReadLine().ToLower();
     if(input=="e")
@@ -22,6 +23,7 @@ while(loop)
         {
             Console.WriteLine(newFilm.Ad+", IMBD Puani= "+newFilm.Puan);
         }
+        //we get the first character of the string variable Ad.(we can do this because strings are just character arrays)
         Console.WriteLine("============Film adi 'A' karakteriyle baslayanlar==============");
         foreach(Film newFilm in films)
         {
@@ -31,6 +33,7 @@ while(loop)
                 Console.WriteLine(newFilm.Ad + ", IMBD Puani= " + newFilm.Puan);
             }
         }
+        //this is pretty straight forward too
         Console.WriteLine("===========Puani dort ile dokuz arasinda olanlar.====================");
         foreach (Film newFilm in films)
         {
