@@ -17,10 +17,29 @@ while(loop)
     }
     else if (input=="h")
     {
-        foreach(Film newFilm in films)
+        Console.WriteLine("==============Butun kayitli filmler============");
+        foreach (Film newFilm in films)
         {
             Console.WriteLine(newFilm.Ad+", IMBD Puani= "+newFilm.Puan);
-            loop = false;
         }
+        Console.WriteLine("============Film adi 'A' karakteriyle baslayanlar==============");
+        foreach(Film newFilm in films)
+        {
+            char firstLetter = newFilm.Ad[0];
+            if(firstLetter=='A')
+            {
+                Console.WriteLine(newFilm.Ad + ", IMBD Puani= " + newFilm.Puan);
+            }
+        }
+        Console.WriteLine("===========Puani dort ile dokuz arasinda olanlar.====================");
+        foreach (Film newFilm in films)
+        {
+            if(newFilm.Puan<=9&&newFilm.Puan>=4)
+            {
+                Console.WriteLine(newFilm.Ad + ", IMBD Puani= " + newFilm.Puan);
+                loop = false;
+            }
+        }
+
     }
 }
